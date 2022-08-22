@@ -1,0 +1,129 @@
+body{
+    background-color: #000000;
+    animation: fadein 1s;
+
+}
+@keyframes fadein{
+    0% {
+        transform: translateX(-100px);
+     }
+     100%{
+         transform: translateX(0);      
+        }
+    }
+
+@font-face {
+    font-family: "dark";
+    src:url(/fuentes/photograph.ttf);
+  }
+
+header{
+    height: 100px;
+    background-color: #000000;
+    padding: 0 50px;
+    color:#ffde94;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadein 1s;
+    box-shadow: 0 8px 8px 0 rgba(255, 215, 0, 0.5);
+    border-radius: 10px;
+}
+@keyframes fadein{
+    0% {
+        transform: translateX(-100px);
+     }
+     100%{
+         transform: translateX(0);      
+        }
+    }
+
+h2{
+    display: flex;
+    color: #ffde94;
+    font-size: 80px ;
+    font-family: dark;
+    margin-left: 10px; 
+}
+.menu {
+    color:white;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+}
+.botones{
+    display: flex;
+}
+.mostrar-menu,
+.esconder-menu{
+    font-size: 30px;
+    cursor:pointer;
+    display:none;
+    transition: 0.4s;
+    color: white;
+
+}
+.mostrar-menu{
+    order:1;
+
+}
+.mostrar-menu:hover,
+.esconder-menu:hover{
+    color: #ffde94;
+}
+
+#check{
+    display: none;
+}
+.botones button{
+    width: 100%;
+    box-shadow: 0 8px 8px 0 rgba(255, 215, 0, 0.5);
+    border-radius: 10px;
+    margin: 1rem;
+    text-decoration-style: solid;
+    font-style: italic;
+    font-family: sans-serif;
+    color: white;
+    background-color: transparent;
+    transition: 0.3s;
+}
+button:hover{ background-color: rgba(255, 215, 0, 0.5)}
+button:active {
+  text-shadow:2px 2px #000000; 
+  box-shadow: 0 5px rgba(255, 215, 0, 0.5);
+  transform: translateY(4px);
+}
+@media(max-width:864px){
+    .mostrar-menu,
+    .esconder-menu{
+      display: block;
+    }
+    .menu{
+        display: flex;
+        justify-content: center;
+        background-color: #000000;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        padding:150px 0;
+        z-index: 100;
+        transition: 0.4s;
+        box-shadow: 0px 8px 8px 0 rgba(255, 215, 0, 0.5);
+    }
+    .botones{
+        height: 100vh;
+        flex-direction: column;
+        background-color: #000000;
+    }
+    .botones button{
+        width: 75%;
+    }
+    .esconder-menu{
+        position: absolute;
+        top: 40px;
+        right: 20px;
+    }
+    #check:checked ~ .menu{
+        right: 0;
+    }
+    }
